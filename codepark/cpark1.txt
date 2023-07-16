@@ -1,0 +1,81 @@
+Para ficar mais clara a resolução, fiz uma tabela para encaixar os nomes cada qual nos seus lugares:
+|-----------|-----------------|----------------|-------------------|
+|           |     Química     |     Física     |     Matemática    |
+|-----------|-----------------|----------------|-------------------|
+| 1º lugar  |                 |                |                   |
+|-----------|-----------------|----------------|-------------------|
+| 2º lugar  |                 |                |                   |
+|-----------|-----------------|----------------|-------------------|
+| 3º lugar  |                 |                |                   |
+|-----------|-----------------|----------------|-------------------|
+
+A primeira afirmação é que de “Aristóteles não ficou em primeiro lugar em Química”, não excluindo a possibilidade de ele estar no primeiro lugar 
+nas outras disciplinas, então se coloca Aristóteles no primeiro pódio de Física e Matemática e nos outros pódios de Química:
+|-----------|-----------------|----------------|-------------------|
+|           |     Química     |     Física     |     Matemática    |
+|-----------|-----------------|----------------|-------------------|
+| 1º lugar  |                 |   Aristóteles  |    Aristóteles    |
+|           |                 |                |                   |
+|-----------|-----------------|----------------|-------------------|
+| 2º lugar  |   Aristóteles   |                |                   |
+|           |                 |                |                   |
+|-----------|-----------------|----------------|-------------------|
+| 3º lugar  |   Aristóteles   |                |                   |
+|-----------|-----------------|----------------|-------------------|
+
+A segunda afirmação é de que “Sócrates perdeu para Platão em Física”, ou seja, sabemos que Platão está com vantagem em relação a Sócrates, 
+então Platão está nos primeiros dois pódios e Sócrates nos últimos dois pódios
+|-----------|-----------------|----------------|-------------------|
+|           |     Química     |     Física     |     Matemática    |
+|-----------|-----------------|----------------|-------------------|
+| 1º lugar  |                 |   Aristóteles  |    Aristóteles    |
+|           |                 |     Platão     |                   |
+|-----------|-----------------|----------------|-------------------|
+| 2º lugar  |   Aristóteles   |     Platão     |                   |
+|           |                 |    Sócrates    |                   |
+|-----------|-----------------|----------------|-------------------|
+| 3º lugar  |   Aristóteles   |    Sócrates    |                   |
+|-----------|-----------------|----------------|-------------------|
+
+
+A terceira afirmação é de que “Platão acertou mais que Aristóteles em Matemática”. Nessa afirmação excluímos a possibilidade de Aristóteles 
+estar no primeiro pódio de Matemática, pois se ele perdeu para Platão, então Platão está no primeiro lugar em Física e Aristóteles em 
+Matemática, sobrando Sócrates para o primeiro lugar em Química:
+|-----------|-----------------|----------------|-------------------|
+|           |     Química     |     Física     |     Matemática    |
+|-----------|-----------------|----------------|-------------------|
+| 1º lugar  |     Sócrates    |   Aristóteles  |       Platão      |
+|-----------|-----------------|----------------|-------------------|
+| 2º lugar  |   Aristóteles   |     Platão     |    Aristóteles    |
+|           |      Platão     |    Sócrates    |      Sócrates     |
+|-----------|-----------------|----------------|-------------------|
+| 3º lugar  |   Aristóteles   |    Sócrates    |    Aristóteles    |
+|           |      Platão     |                |     Sócrates      |
+|-----------|-----------------|----------------|-------------------|
+
+
+Usando a segunda afirmação, definimos também os lugares de Sócrates e Platão em Física, visto que Sócrates perde de Platão:
+|-----------|-----------------|----------------|-------------------|
+|           |     Química     |     Física     |     Matemática    |
+|-----------|-----------------|----------------|-------------------|
+| 1º lugar  |     Sócrates    |   Aristóteles  |       Platão      |
+|-----------|-----------------|----------------|-------------------|
+| 2º lugar  |   Aristóteles   |     Platão     |    Aristóteles    |
+|           |      Platão     |                |      Sócrates     |
+|-----------|-----------------|----------------|-------------------|
+| 3º lugar  |   Aristóteles   |    Sócrates    |     Aristóteles   |
+|           |      Platão     |                |      Sócrates     |
+|-----------|-----------------|----------------|-------------------|
+
+
+Supondo que cada um dos alunos ocupou pódios diferentes em cada matéria, não ocupando o mesmo pódio duas vezes em matérias diferentes, 
+exclui-se Platão do segundo pódio em Química e Sócrates do terceiro pódio em matemática, definindo assim os três pódios:
+|-----------|-----------------|----------------|-------------------|
+|           |     Química     |     Física     |     Matemática    |
+|-----------|-----------------|----------------|-------------------|
+| 1º lugar  |     Sócrates    |   Aristóteles  |       Platão      |
+|-----------|-----------------|----------------|-------------------|
+| 2º lugar  |   Aristóteles   |     Platão     |    Aristóteles    |
+|-----------|-----------------|----------------|-------------------|
+| 3º lugar  |     Platão      |    Sócrates    |      Sócrates     |
+|-----------|-----------------|----------------|-------------------|
