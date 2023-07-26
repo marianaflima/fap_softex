@@ -1,4 +1,4 @@
-let a, b, c, calcular;
+let numA, numB, operação, calcular;
 
 function calculadora(n1, n2, op) {
     switch(op) {
