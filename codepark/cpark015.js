@@ -18,7 +18,7 @@ while (rodar = true) {
             idadeAtual = anoAtual - anoNascimento;
             console.log('Sua idade é:', idadeAtual)
         } else {
-            throw new Error('Fora do intervalo de anos estabelecido!')
+            throw Error('Você digitou um ano inválido')
         }
     } catch(error) {
         console.log(error, 'Digite novamente.')
