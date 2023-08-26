@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Férias</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<section class="section-form">
+			<div class="form-container">
+				<div class="container">
+					<div class="form-content">
+						<header class="form-header">
+							<h1>Calculadora de Férias</h1>
+						</header>
+						<div class="block-item">
+							<p>Salário Bruto:</p>
+							<input id="INPUTsalarioBruto" placeholder="0,00" type="text" maxlength="6">
+						</div>
+						<div class="block-item">
+							<p>Meses Trabalhados:</p>
+							<input id="INPUTmesesTrabalhados" placeholder="0" type="text"  maxlength="2">
+						</div>
+						<div class="form-button">
+							<button onclick="main()">Calcular</button>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="form-output">
+						<div class="block-feedback">
+							<span id="OUTPUTfeedback">Feedback</span>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="form-output">
+						<table id="tableResults">
+							<thead>
+							  <tr>
+								<th>Evento</th>
+								<th>Valor</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>Número de dias de férias</td>
+								<td id="OUTPUTdiasDeFerias"></td>
+							  </tr>
+							  <tr>
+								<td>Valor férias proporcionais</td>
+								<td id="OUTPUTvalorFeriasProporcionais"></td>
+							  </tr>
+							  <tr>
+								<td>1/3 férias</td>
+								<td id="OUTPUTvalorUmTercoFerias"></td>
+							  </tr>
+							  <tr>
+								<td>Desconto Previdencia</td>
+								<td id="OUTPUTvalorDesconto"></td>
+							  </tr>
+							  <tr>
+								<td>Valor total férias proporcionais</td>
+								<td id="OUTPUTvalorTotalFeriasProporcionais"></td>
+							  </tr>
+							</tbody>
+						  </table>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+    <script src="script.js"></script>
+</body>
+</html>
