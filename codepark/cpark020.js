@@ -1,105 +1,133 @@
-class Familiar {
-    constructor(Nome) {
-        this.nome = Nome;
+class Node {
+    constructor(value) {
+        this.value = value;
         this.next = null;
     }
+
+    set next(value) {
+        this.next = value;
+    }
+
+    get next() {
+        return this.next;
+    }
+
+    get value() {
+        return this.value;
+    }
 }
 
-class ArvoreGenealógica {
-    constructor() {
+class LinkedList {
+    constructor(value) {
         this.head = null;
+        this.size = 0;
+
+        if (value !== undefined) {
+            this.append(value);
+            if (Array.isArray(value)) {
+                for(let element of value) {
+                    this.append(element);
+                }
+            } else {
+                this.append(value);
+            }
+        }
     }
 
-    //Adiciona ao início da lista
-    addFirst(Nome) {
-        const newMember = new Familiar(Nome);
-        newMember.next = this.head;
-        this.head = newMember
+    get size() {
+        return this.size;
     }
 
-    //Adiciona ao final da lista
-    addLast(Nome) {
-        const newMember = new Familiar(Nome);
-        if (!this.head) {
-            this.head = newMember;
+    get isEmpty() {
+        return this.size === 0;
+    }
+    
+    get head() {
+        return this.head;
+    }
+
+    set head(value) {
+        this.head = value;
+    }
+
+    _getByIndex(index) {
+        let previousNode = null;
+        let currentNode = this.head;
+        while (index > 0) {
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+            index--;
+        }
+
+        return [currentNode, previousNode];
+    }
+
+    get(index) {
+        let [currentNode,_] = this._getByIndex(index);
+        return currentNode.value;
+    }
+
+    insert(node, value) {
+        let newNode = new LinkedList(value);
+
+        if (node == null) {
+            newNode.next = this.head;
+            this.head = newNode;
         } else {
-            let current = this.head;
-            while (current.next) {
-                current = current.next;
-            }
-            current.next = newMember;
+            let next = node.next;
+            node.next = newNode;
+            node.next.next = next;
         }
+
+        this.size = this.size + 1;
+        return node;
     }
 
-    //Remove o primeiro item da lista
-    removeFirst(Nome) {
-        if (!this.head) {
-            return null;
-        }
-        const removedMember = this.head;
-        this.head = this.head.next;
-        removedMember.proximo = null;
-        return removedMember.Nome
+    insertAt(value, index) {
+        let [_, previous] = this._getByIndex(index);
+        this.insert(previous, value);
     }
 
-    //Remove o último item da lista
-    removeLast(Nome) {
-        if (!this.head) {
-            return null;
+    add(value) {
+        this.insert(null, value);
+    }
+
+    append(value) {
+        this.insertAt(value, this.size);
+    }
+
+    remove(index) {
+        let [currentNode, previousNode] = this._getByIndex(index);
+
+        if (previousNode !== null) {
+            previousNode.next = currentNode.next;
+        } else {
+            this.head = currentNode.next;
         }
-        if (!this.head.next) {
-            const removedMember = this.head;
-            this.head = null;
-            this.head = null;
-                return removedMember.Nome
-        }
+
+        this.size = this.size - 1;
+    }
+
+    *values() {
         let current = this.head;
-        let previous = null;
-        while (current.next) {
-            previous = current;
+        while (current !== null) {
+            yield current.value;
             current = current.next;
         }
-        previous.next = null;
-        return current.Nome
     }
 
-    //Procura o item na lista
-    search(Nome) {
-        let current = this.head;
-        while (current) {
-            if (current.Nome === Nome){
-                return current
-            }
-            current = current.next;
-        }
-        return null;
+    [Symbol.iterator]() {
+        return this.values();
     }
 
-    //Retorna o tamanho da lista
-    size() {
-        let count = 0;
-        let current = this.head;
-        while (current) {
-            count++;
-            current = current.next
-        }
-        return count;
-    }
+    toArray() {
+        let array = [];
+        for (let node of this)
+            array.push(node);
 
-    //Imprime a lista
-    printList() {
-        let current = this.head;
-        while (current) {
-            console.log(current.Nome);
-            current = current.next;
-        }
+        return array;
     }
 }
 
-const familiaReal = new ArvoreGenealógica();
+let listaEncadeada = new LinkedList(['Albert', 'Elizabeth']);
 
-familiaReal.addFirst('Albert')
-familiaReal.addLast('Elizabeth')
-familiaReal.addLast('Charles')
-
-familiaReal.printList()
