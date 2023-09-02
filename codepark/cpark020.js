@@ -129,5 +129,6 @@ class LinkedList {
     }
 }
 
-let listaEncadeada = new LinkedList(['Albert', 'Elizabeth']);
+let listaEncadeada = new LinkedList(['Albert', 'Elizabeth', 'Charles']);
 
+console.log(listaEncadeada)
