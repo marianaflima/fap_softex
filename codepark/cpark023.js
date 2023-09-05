@@ -8,6 +8,7 @@ salario: number
 idade: number
 temDiploma: boolean
 */
+
 nome = 'João da Siva';
 salario = 5000.00;
 idade = 30;
