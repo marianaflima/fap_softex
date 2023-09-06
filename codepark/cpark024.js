@@ -8,4 +8,4 @@ nota3 = Number(prompt("Digite a 3ª nota: "));
 
 media = (nota1 + nota2 + nota3) / 3;
 
-console.log(`Sua nota final é: ${media.toFixed(2)}`);
+console.log(`Sua nota final é: ${media.toFixed(1)}`);
