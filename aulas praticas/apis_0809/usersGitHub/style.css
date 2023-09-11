@@ -1,0 +1,27 @@
+/* Estilo para o contêiner dos perfis */
+.perfis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Perfis com no mínimo 250px de largura */
+    gap: 20px; /* Espaço entre os perfis */
+}
+
+div {
+    text-align: center;
+}
+
+/* Estilo para a imagem do perfil */
+img {
+    max-width: 100%;
+    border-radius: 50%; /* Para criar bordas arredondadas */
+}
+
+/* Estilo para o nome do perfil */
+h4 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Estilo para a descrição do perfil */
+p {
+    font-size: 0.9em;
+}
