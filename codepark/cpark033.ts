@@ -39,7 +39,7 @@ class Moto implements Veiculo {
 }
 
 class Aplicacao {
-    public veiculos: Veiculo[] = [];
+    private veiculos: Veiculo[] = [];
 
     addVeiculo(veiculo: Veiculo): void {
         this.veiculos.push(veiculo)
@@ -47,6 +47,13 @@ class Aplicacao {
 
     clone(): Veiculo[] {
         return this.veiculos.map(veiculo => veiculo.clone())
+    }
+
+    represent(): void {
+        const clones = this.clone();
+        for (const veiculo of clones) {
+            console.log(veiculo.represent());
+        }
     }
 }
 
@@ -66,8 +73,10 @@ arrayVeiculos.addVeiculo(moto1);
 arrayVeiculos.addVeiculo(moto2);
 arrayVeiculos.addVeiculo(moto3);
 
-console.log(arrayVeiculos)
+arrayVeiculos.represent()
 
 const arrayClone = arrayVeiculos.clone()
 
 console.log(arrayClone)
+
+
