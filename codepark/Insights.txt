@@ -1,0 +1,8 @@
+Insights sobre a tabela de transações:
+
+- Todos os valores são acima de 100, e não há nenhum acima na minha tabela
+- A maior transação feita pela empresa foi de R$ 5447.84, no mês 06, e a menor foi de 631.48
+- O total de vendas feitas pela empresa durante um ano foram 100, acumulando ao total com as vendas R$ 305 661.07 e uma média de R$ 3056.61 nas vendas
+- O preço médio de Acessórios ficou em torno de R$ 3058.56, Smartphones em R$ 3195.89 e Laptops em R$ 2897.87 
+- Houve uma maior venda de Smartphones (36) do que de Acessórios e Laptops (os dois com 32 vendas cada)
+- O maior número de vendas por mês foi registrado no mês 09 (12) e o menor no mês 04 (3)
